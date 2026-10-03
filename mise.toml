@@ -1,0 +1,35 @@
+min_version = "2026.9.0"
+
+[tools]
+# uv owns the Python interpreter (see .python-version and requires-python); mise only pins uv.
+uv = "0.12.22"
+lefthook = "2.1.16"
+
+[env]
+# Run project binaries (pytest, ruff) directly, without `uv run`.
+_.path = ["{{config_root}}/.venv/bin"]
+_.file = ".env"
+
+[hooks]
+# Installs the git hooks the first time `mise install` runs in a clone.
+postinstall = "lefthook install"
+
+[tasks.install]
+description = "Create .venv and install locked dependencies"
+run = "uv sync --locked"
+
+[tasks.check]
+description = "ruff format + lint, as CI runs them"
+run = ["ruff format --check .", "ruff check ."]
+
+[tasks.fmt]
+description = "Format and auto-fix"
+run = ["ruff format .", "ruff check --fix ."]
+
+[tasks.test]
+description = "Run the test suite"
+run = "pytest"
+
+[tasks.build]
+description = "Build sdist and wheel into dist/"
+run = "uv build"
