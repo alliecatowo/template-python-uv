@@ -5,7 +5,7 @@ name: Release
 #
 # PyPI TRUSTED PUBLISHING (OIDC): no API token anywhere. One-time setup on pypi.org
 # (and test.pypi.org): Publishing > add a (pending) publisher with owner alliecatowo,
-# repo template-python-uv, workflow `release.yml`, environment `pypi` (`testpypi` for TestPyPI).
+# this repo, workflow `release.yml`, environment `pypi` (`testpypi` for TestPyPI).
 # Create both environments in the repo settings; add required reviewers to `pypi` if you
 # want an approval gate.
 on:
