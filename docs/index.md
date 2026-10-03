@@ -2,7 +2,7 @@
 layout: home
 hero:
   name: "template-python-uv"
-  tagline: "Python package template: uv, pytest, ruff, PyPI trusted publishing, mise, lefthook, CI and a VitePress docs site."
+  tagline: "Python uv package template with CI, releases and docs."
   actions:
     - theme: brand
       text: Get started

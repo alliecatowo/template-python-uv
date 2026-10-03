@@ -3,9 +3,11 @@ import { defineConfig } from "vitepress";
 // GitHub Pages serves project sites under /<repo>/. Set DOCS_BASE=/ for a custom domain.
 export default defineConfig({
   title: "template-python-uv",
-  description: "Python package template: uv, pytest, ruff, PyPI trusted publishing, mise, lefthook, CI and a VitePress docs site.",
+  description: "Python uv package template with CI, releases and docs.",
   base: process.env.DOCS_BASE ?? "/template-python-uv/",
   cleanUrls: true,
+  // docs/ is its own project: never pick up a postcss config from the parent app.
+  vite: { css: { postcss: { plugins: [] } } },
   lastUpdated: true,
   themeConfig: {
     nav: [{ text: "Guide", link: "/guide/getting-started" }],

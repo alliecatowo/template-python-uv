@@ -4,7 +4,7 @@ Guidance for AI agents (and humans) working in the **template-python-uv** repo.
 
 ## What template-python-uv is
 
-Python package template: uv, pytest, ruff, PyPI trusted publishing, mise, lefthook, CI and a VitePress docs site. A Python package in a `src/` layout, built with `uv_build`, managed entirely with uv, tested with pytest, linted and formatted with ruff.
+Python uv package template with CI, releases and docs. A Python package in a `src/` layout, built with `uv_build`, managed entirely with uv, tested with pytest, linted and formatted with ruff.
 
 ## Commands
 

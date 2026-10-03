@@ -1,4 +1,4 @@
-"""Python package template: uv, pytest, ruff, PyPI trusted publishing, mise, lefthook, CI and a VitePress docs site."""
+"""Python uv package template with CI, releases and docs."""
 
 
 def greet(name: str) -> str:
